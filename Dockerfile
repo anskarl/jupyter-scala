@@ -1,5 +1,5 @@
-# Jupyter version 281505737f8a (Oct. 06, 2017)
-FROM jupyter/minimal-notebook:281505737f8a
+# Jupyter version 2c80cf3537ca (Dec. 30, 2017)
+FROM jupyter/minimal-notebook:2c80cf3537ca
 
 LABEL maintainer="Anastasios Skarlatidis"
 
@@ -23,20 +23,21 @@ USER root
 RUN \
   apt-get update \
   && apt-get install -y software-properties-common python-software-properties \
-  && apt-get install -y curl 
+  && apt-get install -y curl \
+  && apt-get install -y openjdk-8-jdk \
+  && rm -rf /var/lib/apt/lists/*
 
-# Install Oracle JDK version 8
-RUN \
-  echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true \
-  | debconf-set-selections && \
-  add-apt-repository -y ppa:webupd8team/java && \
-  apt-get update && \
-  apt-get install -y oracle-java8-installer && \
-  rm -rf /var/lib/apt/lists/* && \
-  rm -rf /var/cache/oracle-jdk8-installer
+#RUN \
+#  echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true \
+#  | debconf-set-selections && \
+#  add-apt-repository -y ppa:webupd8team/java && \
+#  apt-get update && \
+#  apt-get install -y oracle-java8-installer && \
+#  rm -rf /var/lib/apt/lists/* && \
+#  rm -rf /var/cache/oracle-jdk8-installer
 
 # Define JAVA_HOME environment variable
-ENV JAVA_HOME /usr/lib/jvm/java-8-oracle
+ENV JAVA_HOME /usr/lib/jvm/openjdk-8
 ENV PATH=${PATH}:${JAVA_HOME}/bin
 
 # -----------------------------------------------------------------------------

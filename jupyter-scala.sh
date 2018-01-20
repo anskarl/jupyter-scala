@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-IMAGE_VERSION="1.0.1"
+IMAGE_VERSION="1.0.2"
 COURSIER_VOLUME_NAME="jupyter_scala_coursier"
 
 # create volume COURSIER_VOLUME_NAME if not exists
