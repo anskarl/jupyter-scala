@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-IMAGE_VERSION="1.0.2"
+IMAGE_VERSION="1.0.3"
 
 TAG=anskarl/jupyter-scala:${IMAGE_VERSION}
 

@@ -19,14 +19,14 @@ To pull the latest version of the image:
 docker pull anskarl/jupyter-scala:latest
 ```
 
-If you like to pull a specific version, e.g., version 1.0.1:
+If you like to pull a specific version, e.g., version 1.0.3:
 ```
-docker pull anskarl/jupyter-scala:1.0.1
+docker pull anskarl/jupyter-scala:1.0.3
 ```
 
 ### Start docker image
 
-To start this docker image you can simply execute a `docker run` command that points to the `anskarl/jupyter-scala:${IMAGE_VERSION}`, where `${IMAGE_VERSION}` is the version of this project (e.g., 1.0.0). 
+To start this docker image you can simply execute a `docker run` command that points to the `anskarl/jupyter-scala:${IMAGE_VERSION}`, where `${IMAGE_VERSION}` is the version of this project (e.g., 1.0.3). 
 
 
 For simplicity you can run the following utility script:
@@ -46,4 +46,4 @@ In order to build docker image locally, you can execute the following:
 ```
 ./build.sh
 ```
-After a successful build the resulting image is `anskarl/jupyter-scala:${IMAGE_VERSION}`, where `${IMAGE_VERSION}` is the version of this project (e.g., 1.0.1)
+After a successful build the resulting image is `anskarl/jupyter-scala:${IMAGE_VERSION}`, where `${IMAGE_VERSION}` is the version of this project (e.g., 1.0.3)
